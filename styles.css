@@ -918,7 +918,7 @@ a { color: inherit; }
   width: 56px;
   height: 56px;
   border-radius: 18px;
-  background: var(--cyan-accent);
+  background: var(--plum);
   display: flex;
   align-items: center;
   justify-content: center;
