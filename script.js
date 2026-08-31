@@ -79,44 +79,20 @@ if (heroCarousel) {
   }
 }
 
-// "Get Started" CTA modal
-const ctaModal = document.getElementById('ctaModal');
-if (ctaModal) {
-  const openTriggers = document.querySelectorAll('.js-open-cta-modal');
-  const closeEls = ctaModal.querySelectorAll('[data-modal-close]');
-
-  function openCtaModal(e) {
+// Contact form -> composes a mailto to Dr. Coleman
+const ctaForm = document.getElementById('ctaForm');
+if (ctaForm) {
+  ctaForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    ctaModal.classList.add('is-open');
-    ctaModal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeCtaModal() {
-    ctaModal.classList.remove('is-open');
-    ctaModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  openTriggers.forEach((btn) => btn.addEventListener('click', openCtaModal));
-  closeEls.forEach((el) => el.addEventListener('click', closeCtaModal));
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && ctaModal.classList.contains('is-open')) closeCtaModal();
+    const name = ctaForm.name.value.trim();
+    const email = ctaForm.email.value.trim();
+    const phone = ctaForm.phone.value.trim();
+    const preferred = ctaForm.preferred ? ctaForm.preferred.value.trim() : '';
+    const message = ctaForm.message.value.trim();
+    const subject = encodeURIComponent(`New inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred contact method: ${preferred}\n\nReason for reaching out:\n${message}`
+    );
+    window.location.href = `mailto:ccoleman@liberationcounselingllc.com?subject=${subject}&body=${body}`;
   });
-
-  const ctaForm = document.getElementById('ctaForm');
-  if (ctaForm) {
-    ctaForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = ctaForm.name.value.trim();
-      const email = ctaForm.email.value.trim();
-      const phone = ctaForm.phone.value.trim();
-      const message = ctaForm.message.value.trim();
-      const subject = encodeURIComponent(`New inquiry from ${name}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
-      );
-      window.location.href = `mailto:ElizabethWynn@WynnTherapy.com?subject=${subject}&body=${body}`;
-    });
-  }
 }
