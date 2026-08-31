@@ -319,21 +319,7 @@ a { color: inherit; }
   position: relative;
   padding: 180px 0 110px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(149, 96, 174, 0.16), var(--cream) 45%, rgba(187, 151, 204, 0.14));
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 180px;
-  background: linear-gradient(to bottom, transparent, var(--cream));
-  pointer-events: none;
-  z-index: 1;
-}
-.hero--to-panel::after {
-  background: linear-gradient(to bottom, transparent, var(--panel));
+  background: var(--cream);
 }
 .blob,
 .cta-band [class^="blob-f"] {
@@ -630,28 +616,6 @@ a { color: inherit; }
   position: relative;
   background: var(--panel);
   padding: 100px 0;
-}
-.about::before,
-.about::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 220px;
-  pointer-events: none;
-  z-index: -1;
-}
-.about::before {
-  top: -220px;
-  background: linear-gradient(to bottom, transparent, var(--panel));
-}
-.about::after {
-  bottom: -220px;
-  background: linear-gradient(to bottom, var(--panel), transparent);
-}
-.about--solid::before,
-.about--solid::after {
-  display: none;
 }
 .about--solid {
   background: #e1ceea;
@@ -961,7 +925,7 @@ a { color: inherit; }
 /* ---------- CTA band ---------- */
 .cta-band-wrap { padding: 0 clamp(16px, 4vw, 40px) 90px; }
 .cta-band {
-  background: linear-gradient(135deg, rgba(149, 96, 174, 0.16), var(--cream) 45%, rgba(187, 151, 204, 0.14));
+  background: var(--panel);
   border-radius: 36px;
   text-align: center;
   padding: 90px 40px;
