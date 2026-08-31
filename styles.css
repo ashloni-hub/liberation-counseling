@@ -636,6 +636,7 @@ a { color: inherit; }
 }
 .about--cream .quote-wrap { margin-bottom: 70px; }
 .about--tint2 { background: #eedabd; }
+.about--tint3 { background: #edd9bc; }
 .about-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
