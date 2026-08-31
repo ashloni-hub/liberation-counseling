@@ -396,6 +396,15 @@ a { color: inherit; }
   gap: clamp(30px, 6vw, 70px);
   align-items: center;
 }
+.hero-inner--centered {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-inner--centered .eyebrow { margin-left: auto; margin-right: auto; }
+.hero-inner--centered .hero-copy p.lede { margin-left: auto; margin-right: auto; }
+.hero-inner--centered .hero-cta-row { justify-content: center; }
 .hero-copy h1 {
   font-weight: 600;
   font-size: clamp(2rem, 1.6rem + 2.2vw, 3.2rem);
