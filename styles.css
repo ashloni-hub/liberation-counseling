@@ -586,6 +586,9 @@ a { color: inherit; }
 /* ---------- Benefits ---------- */
 .benefits { padding: 90px 0; }
 .benefits--tint { background: #e7dbef; }
+.benefits--tint .benefit-card { display: flex; align-items: center; gap: 16px; }
+.benefits--tint .icon-chip { margin-bottom: 0; flex-shrink: 0; }
+.benefits--tint .benefit-card p { margin-bottom: 0; }
 .benefit-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
