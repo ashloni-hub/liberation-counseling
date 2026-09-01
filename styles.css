@@ -779,7 +779,7 @@ a { color: inherit; }
   overflow-x: hidden;
   overflow-y: visible;
   width: 100%;
-  padding: 12px 0;
+  padding: 20px 0;
 }
 .creds-slider:hover .creds-track { animation-play-state: paused; }
 .creds-track {
@@ -794,13 +794,13 @@ a { color: inherit; }
   to { transform: translateX(0); }
 }
 .creds-track .chip {
-  padding: 10px 14px;
+  padding: 14px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
-.creds-track img { height: 80px; width: auto; max-width: 200px; object-fit: contain; }
+.creds-track img { height: 120px; width: auto; max-width: 280px; object-fit: contain; }
 
 /* ---------- Bio ---------- */
 .bio {
