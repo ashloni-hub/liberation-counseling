@@ -646,6 +646,7 @@ a { color: inherit; }
   gap: clamp(30px, 6vw, 80px);
   align-items: center;
 }
+.about-grid--text-first { grid-template-columns: 1.15fr 0.85fr; }
 .about-media { position: relative; }
 .about-media img {
   border-radius: var(--radius-lg);
