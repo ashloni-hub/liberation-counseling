@@ -93,6 +93,6 @@ if (ctaForm) {
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred contact method: ${preferred}\n\nReason for reaching out:\n${message}`
     );
-    window.location.href = `mailto:ccoleman@liberationcounselingllc.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:liberationcounselingllc@pm.me?subject=${subject}&body=${body}`;
   });
 }
