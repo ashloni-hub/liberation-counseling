@@ -86,7 +86,12 @@
       </div>
       <div class="about-copy reveal reveal-from-right">
         <span class="eyebrow">Send a Message</span>
-        <form class="cta-form" id="ctaForm">
+        <form class="cta-form" id="ctaForm" method="POST" action="/api/contact">
+          <p class="cta-form-error" id="ctaFormError" hidden>Something went wrong sending your message. Please call 804-944-7990 or email directly instead.</p>
+          <div class="cta-form-honeypot" aria-hidden="true">
+            <label for="ctaWebsite">Website</label>
+            <input type="text" id="ctaWebsite" name="website" tabindex="-1" autocomplete="off" />
+          </div>
           <label class="sr-only" for="ctaName">Name</label>
           <input type="text" id="ctaName" name="name" placeholder="Name" required />
           <label class="sr-only" for="ctaEmail">Email</label>

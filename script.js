@@ -79,20 +79,9 @@ if (heroCarousel) {
   }
 }
 
-// Contact form -> composes a mailto to Dr. Coleman
-const ctaForm = document.getElementById('ctaForm');
-if (ctaForm) {
-  ctaForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = ctaForm.name.value.trim();
-    const email = ctaForm.email.value.trim();
-    const phone = ctaForm.phone.value.trim();
-    const preferred = ctaForm.preferred ? ctaForm.preferred.value.trim() : '';
-    const message = ctaForm.message.value.trim();
-    const subject = encodeURIComponent(`New inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred contact method: ${preferred}\n\nReason for reaching out:\n${message}`
-    );
-    window.location.href = `mailto:liberationcounselingllc@pm.me?subject=${subject}&body=${body}`;
-  });
+// Contact form -> posts to the Worker's /api/contact route (see src/worker.js).
+// On failure the Worker redirects back here with ?error=1; show the banner.
+const ctaFormError = document.getElementById('ctaFormError');
+if (ctaFormError && new URLSearchParams(window.location.search).get('error') === '1') {
+  ctaFormError.hidden = false;
 }

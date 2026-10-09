@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "liberation-counseling",
+  "compatibility_date": "2026-10-09",
+  "main": "src/worker.js",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "CONTACT_TO_EMAIL": "liberationcounselingllc@pm.me",
+    "CONTACT_FROM_EMAIL": "Liberation Counseling & Consultation <no-reply@liberationcounselingllc.com>"
+  }
+}

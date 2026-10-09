@@ -1334,6 +1334,22 @@ a { color: inherit; }
 }
 .cta-form textarea { resize: vertical; min-height: 90px; font-family: var(--font-body); }
 .cta-form-note { font-size: 0.82rem; color: var(--ink-soft); margin: 2px 0 0; }
+.cta-form-error {
+  font-size: 0.9rem;
+  color: #9a3b3b;
+  background: rgba(154, 59, 59, 0.08);
+  border: 1px solid rgba(154, 59, 59, 0.25);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 0;
+}
+.cta-form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 /* ---------- Quote band with check pills ---------- */
 .quote-band { padding: 100px 0; }
