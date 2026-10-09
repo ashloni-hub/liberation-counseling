@@ -1199,6 +1199,8 @@ a { color: inherit; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  .reveal-from-right,
+  .reveal-from-left { opacity: 1; transform: none; }
   .hero { padding: 90px 0 55px; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-figure { order: -1; max-width: 360px; margin: 0 auto; }
