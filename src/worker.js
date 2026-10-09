@@ -12,8 +12,10 @@ export default {
 
 async function handleContact(request, env, ctx) {
   const origin = new URL(request.url).origin;
-  const errorRedirect = Response.redirect(`${origin}/contact.html?error=1#reach`, 302);
-  const successRedirect = Response.redirect(`${origin}/thank-you.html`, 302);
+  // Cloudflare's default html_handling strips .html from requests, so redirect
+  // straight to the canonical extensionless path and skip the extra hop.
+  const errorRedirect = Response.redirect(`${origin}/contact?error=1#reach`, 302);
+  const successRedirect = Response.redirect(`${origin}/thank-you`, 302);
 
   let formData;
   try {
