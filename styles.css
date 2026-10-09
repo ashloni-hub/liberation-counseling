@@ -215,6 +215,7 @@ a { color: inherit; }
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.2rem;
+  line-height: 1.1;
   color: #2b2a2a;
 }
 
