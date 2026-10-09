@@ -1199,6 +1199,7 @@ a { color: inherit; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  .hero { padding: 90px 0 55px; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-figure { order: -1; max-width: 360px; margin: 0 auto; }
   .benefit-grid { grid-template-columns: repeat(2, 1fr); }
