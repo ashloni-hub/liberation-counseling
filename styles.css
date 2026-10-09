@@ -1204,6 +1204,8 @@ a { color: inherit; }
   .hero { padding: 90px 0 55px; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-figure { order: -1; max-width: 360px; margin: 0 auto; }
+  .about-media img { aspect-ratio: 5 / 4 !important; }
+  .about-grid--text-first .about-media { order: -1; }
   .benefit-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; }
   .about-media { max-width: 420px; margin: 0 auto; }
